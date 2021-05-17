@@ -21,12 +21,12 @@
 <distributionManagement>
 			 <snapshotRepository>
 			    <id>nexus</id>
-			    <url>thttp://192.168.217.133:8081/repository/maven2-snapshot/</url>
+			    <url>http://192.168.217.133:8081/repository/maven2-snapshot/</url>
 			 </snapshotRepository>
 			
 			<repository>
 			    <id>nexus</id>
-			    <url>/http://192.168.217.133:8081/repository/maven2-release/</url>
+			    <url>http://192.168.217.133:8081/repository/maven2-release/</url>
 			</repository>
 	  	</distributionManagement>
 

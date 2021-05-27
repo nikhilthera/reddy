@@ -1,4 +1,4 @@
-pipeline{
+pigit peline{
     agent any
     stages{
         stage('git checkout'){
@@ -15,8 +15,8 @@ pipeline{
             steps {sshagent(['Tomcat']) {
     // copy war file to tomcat
     sh "scp -o StrictHostKeyChecking=no target/reddy.war nihkilthera@http://192.168.217.135:/opt/tomcat8/webapps/"
-    sh "ssh "ssh nihkilthera@http://192.168.217.135 /opt/tomcat8/bin/shutdown.sh"
-    sh "ssh "ssh nihkilthera@http://192.168.217.135 /opt/tomcat8/bin/startup.sh"
+    sh "ssh "ssh nihkilthera@192.168.217.135 /opt/tomcat8/bin/shutdown.sh"
+    sh "ssh "ssh nihkilthera@192.168.217.135 /opt/tomcat8/bin/startup.sh"
 
 }}
             

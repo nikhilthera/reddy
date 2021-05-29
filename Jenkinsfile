@@ -14,9 +14,9 @@ pipeline{
         stage('tomcat'){
             steps {sshagent(['ssh']){
     // copy war file to tomcat
-    sh "scp -o StrictHostKeyChecking=no /home/nikhil/reddy/target/reddy.war sudo@192.168.217.135:/opt/tomcat8/webapps"
-    sh "ssh sudo@192.168.217.135 /opt/tomcat8/bin/shutdown.sh"
-    sh "ssh sudo@192.168.217.135 /opt/tomcat8/bin/startup.sh"
+    sh "scp -o StrictHostKeyChecking=no /home/nikhil/reddy/target/reddy.war nikhilthera@192.168.217.135:/opt/tomcat8/webapps"
+    sh "ssh nikhilthera@192.168.217.135 /opt/tomcat8/bin/shutdown.sh"
+    sh "ssh nikhilthera@192.168.217.135 /opt/tomcat8/bin/startup.sh"
 
 }
                   }

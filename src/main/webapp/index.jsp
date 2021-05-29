@@ -1,5 +1,5 @@
 <html>
 <body>
-<h1 style="colour:red">Hello World! This is a test1 from Nikhil</h1>
+<p style="colour:red">Hello World! This is a test1 from Nikhil</p>
 </body>
 </html>

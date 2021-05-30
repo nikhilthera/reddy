@@ -29,7 +29,7 @@ pipeline{
     }
     post {
   failure {
-    mail bcc: '', body: "job ${JOB_NAME} is failed. Please find the usrl to access ${BUILD_URL} ", cc: '', from: '', replyTo: '', subject: "Jenkins job ${JOB_URL} failure", to: 'nikhilkumar.thera@gmail.com'
+    mail bcc: '', body: "job ${JOB_NAME} is failed. Please find the usrl to access ${BUILD_URL} ", cc: '', from: '', replyTo: '', subject: "Jenkins job ${JOB_NAME} failure", to: 'nikhilkumar.thera@gmail.com'
   }
 }
 }

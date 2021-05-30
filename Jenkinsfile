@@ -1,4 +1,4 @@
-displayName = "${projectname}${buildnumber}" 
+currentBuild.displayName = "${projectname}${number}" 
 pipeline{
     agent any
     environment {

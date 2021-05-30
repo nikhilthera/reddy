@@ -1,3 +1,4 @@
+"${displayName}"="${projectname}${buildnumber}" 
 pipeline{
     agent any
     environment {

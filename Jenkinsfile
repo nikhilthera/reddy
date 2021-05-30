@@ -1,4 +1,4 @@
-"${displayName}"="${projectname}${buildnumber}" 
+displayName = "${projectname}${buildnumber}" 
 pipeline{
     agent any
     environment {

@@ -8,10 +8,12 @@ pipeline{
 }
     stages{
         stage ('maven and tomcat'){
+            steps{
             sh "git checkout ${params.branchname}"
             echo"we are building ${params.branchname}"
             echo"we are deploying to ${params.servers} environment with ip ${serversmap[params.servers]}"
-                    }
+         } 
+         }
 
     }
     }

@@ -9,12 +9,12 @@ pipeline{
     stages{
         stage ('maven'){
             steps{
-                        echo"we are building ${params.branchname}"
+                        echo "we are building ${params.branchname}"
          } 
          }
          stage ('deploy'){
             steps{
-                echo"we are deploying to ${params.servers}" on serversMap."${params.servers}" }
+                echo "we are deploying to ${params.servers}" on "serversMap.${params.servers}" }
          } 
          }
 

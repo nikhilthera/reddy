@@ -4,7 +4,7 @@ pipeline{
     agentany
     parameters {
   choice choices: ['dev', 'uat', 'test'], description: 'choose an app to deploy', name: 'servers'
-         choices: ['finaltest', 'master', 'tomcat'], description: 'choose th ebranch to deploy', name: 'branchname'
+  choice choices: ['finaltest', 'master', 'tomcat'], description: 'choose th ebranch to deploy', name: 'branchname'
 }
     {stages{
         stage ('maven and tomcat'){

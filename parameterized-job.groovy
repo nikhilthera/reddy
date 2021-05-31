@@ -14,7 +14,7 @@ pipeline{
          }
          stage ('deploy'){
             steps{
-                     echo"we are deploying to ${params.servers} environment with ip ${serversmap[params.servers]}"
+                     echo"we are deploying to ${params.servers} }"
          } 
          }
 

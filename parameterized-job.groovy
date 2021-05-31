@@ -1,4 +1,4 @@
-serversMap = [dev:"1.1.1.1"; test:"1.1.1.2"; uat:"1.1.1.3";]
+serversMap = [dev: "1.1.1.1", test: "1.1.1.2", uat: "1.1.1.3"]
 
 pipeline{
     agentany

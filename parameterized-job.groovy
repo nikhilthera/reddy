@@ -9,8 +9,8 @@ pipeline{
     stages{
         stage ('maven'){
             steps{
-                        echo "we are building ${params.branchname}"
-         } 
+                    echo "we are building ${params.branchname}"
+            } 
          }
          stage ('deploy1'){
              when{
@@ -18,29 +18,25 @@ pipeline{
              }
             steps{
                 echo "we are deploying to ${params.servers} on ${serversMap[params.servers]}" }
-<<<<<<< HEAD
-=======
          } 
         stage ('deploy2'){
-            {
+            
                 when{
                     expression {params.servers == 'uat' }
                 }
-            }
-            steps{
+                steps{
                 echo "we are deploying to ${params.servers} on ${serversMap[params.servers]}" }
          } 
         stage ('deploy3'){
              when{
                  epression {params.servers == 'dev' }
              }
-        {
+        
             steps{
                 echo "we are deploying to ${params.servers} on ${serversMap[params.servers]}" }
->>>>>>> 30ae8c931bed0973c8b0213cb253cdc590811beb
          } 
         stage ('deploy2'){
-                            when{
+                  when{
                     expression {params.servers == 'uat' }
                 }
             

@@ -14,7 +14,7 @@ pipeline{
          }
          stage ('deploy1'){
              when{
-                 epression {params.servers == 'dev' }
+                 epression { params.servers == 'dev' }
              }
             steps{
                 echo "we are deploying to ${params.servers} on ${serversMap[params.servers]}" }
@@ -22,14 +22,14 @@ pipeline{
         stage ('deploy2'){
             
                 when{
-                    expression {params.servers == 'uat' }
+                    expression { params.servers == 'uat' }
                 }
                 steps{
                 echo "we are deploying to ${params.servers} on ${serversMap[params.servers]}" }
          } 
         stage ('deploy3'){
              when{
-                 epression {params.servers == 'dev' }
+                 epression { params.servers == 'dev' }
              }
         
             steps{

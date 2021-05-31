@@ -14,7 +14,7 @@ pipeline{
          }
          stage ('deploy'){
             steps{
-                echo "we are deploying to ${params.servers} on serversMap.${serversMap[params.servers]}" }
+                echo "we are deploying to ${params.servers} on ${serversMap[params.servers]}" }
          } 
          }
 

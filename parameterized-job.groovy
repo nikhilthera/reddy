@@ -6,7 +6,7 @@ pipeline{
   choice choices: ['dev', 'uat', 'test'], description: 'choose an app to deploy', name: 'servers'
   choice choices: ['finaltest', 'master', 'tomcat'], description: 'choose th ebranch to deploy', name: 'branchname'
 }
-    stages{
+    stages {
         stage ('maven'){
             steps{
                     echo "we are building ${params.branchname}"
@@ -29,29 +29,13 @@ pipeline{
          } 
         stage ('deploy3'){
              when{
-                 expression { params.servers == 'dev' }
+                 expression { params.servers == 'test' }
              }
         
             steps{
                 echo "we are deploying to ${params.servers} on ${serversMap[params.servers]}" }
          } 
-        stage ('deploy2'){
-                  when{
-                    expression {params.servers == 'uat' }
-                }
-            
-            steps{
-                echo "we are deploying to ${params.servers} on ${serversMap[params.servers]}" }
-         } 
-        stage ('deploy3'){
-             when{
-                 epression {params.servers == 'dev' }
-                      }
         
-            steps{
-                echo "we are deploying to ${params.servers} on ${serversMap[params.servers]}" }
-               
-         }
 
     }
 

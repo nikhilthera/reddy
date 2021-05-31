@@ -7,11 +7,14 @@ pipeline{
   choice choices: ['finaltest', 'master', 'tomcat'], description: 'choose th ebranch to deploy', name: 'branchname'
 }
     stages{
-        stage ('maven and tomcat'){
+        stage ('maven'){
             steps{
-            sh "git checkout ${params.branchname}"
-            echo"we are building ${params.branchname}"
-            echo"we are deploying to ${params.servers} environment with ip ${serversmap[params.servers]}"
+                        echo"we are building ${params.branchname}"
+         } 
+         }
+         stage ('deploy'){
+            steps{
+                     echo"we are deploying to ${params.servers} environment with ip ${serversmap[params.servers]}"
          } 
          }
 

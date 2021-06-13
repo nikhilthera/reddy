@@ -7,14 +7,14 @@ agent any
        }
        stage('master'){
         when{
-          branch is 'master'}
+          branch 'master'}
        steps{
           echo 'deploying to master environment'
          }
        }
        stage('finaltest'){
         when{
-          branch is 'finaltest'
+          branch 'finaltest'
        }
        steps{
           echo 'deploying to finaltest environment'
@@ -22,7 +22,7 @@ agent any
        }
        stage('tomcat'){
         when{
-          branch is 'tomcat'
+          branch 'tomcat'
        }
        steps{
        echo 'deploying to tomcat environment'

@@ -10,7 +10,7 @@
       copy: 
         src: index.html
         dest: /var/www/html
-        notify: 
+      notify: 
           - Restart apache
     - name: start apache server
       service:

@@ -11,7 +11,7 @@
         src: index.html
         dest: /var/www/html
         notify: 
-          - restart apache
+          - Restart apache
     - name: start apache server
       service:
         name: httpd

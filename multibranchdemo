@@ -1,0 +1,32 @@
+pipeline{
+agent any
+    stages{
+      stage('mavenbuild'){
+       steps{
+         sh "mvn clean package"}
+       }
+       stage('master'){
+        when{
+          branch 'master'}
+       steps{
+          echo 'deploying to master environment'
+         }
+       }
+       stage('finaltest'){
+        when{
+          branch 'finaltest'
+       }
+       steps{
+          echo 'deploying to finaltest environment'
+         }
+       }
+       stage('tomcat'){
+        when{
+          branch 'tomcat'
+       }
+       steps{
+       echo 'deploying to tomcat environment'
+       }
+     }
+   }
+ }

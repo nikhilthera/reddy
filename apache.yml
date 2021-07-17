@@ -10,8 +10,15 @@
       copy: 
         src: index.html
         dest: /var/www/html
+        notify: 
+          - restart apache
     - name: start apache server
       service:
         name: httpd
         state: started
         enabled: true
+  handlers: 
+    - name: restart apache
+      service: 
+        name: httpd
+        state: restarted

@@ -3,7 +3,7 @@
   become: true
   tasks:
   - name: installing multiple packages
-     yum:
+    yum:
       name: "{{ item }}"
       state: present
      loop:

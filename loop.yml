@@ -6,6 +6,6 @@
     yum:
       name: "{{ item }}"
       state: present
-     loop:
+    loop:
         - git
         - docker

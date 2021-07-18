@@ -3,20 +3,20 @@
   become: true
   tasks:
    - name: create groups
-      group:
+     group:
         name: "{{ item }}"
         state: present
-    loop:
+     loop:
       - dbadmin
       - linxadmin
-    when: ansible_os_family == "RedHat"
+     when: ansible_os_family == "RedHat"
 
    - name: create users
-      user:
+     user:
         name: "{{ item.user }}"
         groups: "{{ item.group }}"
         state: present
-    loop: 
+     loop: 
       - { group: dbadmin, user: hari }
       - { group: linxadmin, user: ravi }
       - { group: linxadmin, user: hari }

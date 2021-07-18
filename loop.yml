@@ -1,0 +1,11 @@
+---
+- hosts: 172.31.41.128
+  become: true
+  tasks:
+    -name: installing multiple packages
+     yum:
+        name: "{{ item }}"
+        state: present
+     loop:
+        - git
+        - docker

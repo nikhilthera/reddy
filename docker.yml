@@ -9,29 +9,29 @@
       loop:
         - docker
         - python-pip
-        tags:
+      tags:
           - install
   - name: install docker.py
-      pip:
-        name: docker.py
-        state: present
-        tags: 
+    pip:
+      name: docker.py
+      state: present
+      tags: 
           - install
   - name: start and enable docker
-      service:
-        name: docker
-        state: started
-        enabled: true
-        tags: 
-          - start
-          - enable
+    service:
+      name: docker
+      state: started
+      enabled: true
+      tags: 
+        - start
+        - enable
   - name: run containers
-      docker_container:
-        name: myapp
-        image: kammana/nodeapp:v1
-        state: started
-        ports:
-          - 9090:8080
-        tags:
-          - deploy
+    docker_container:
+      name: myapp
+      image: kammana/nodeapp:v1
+      state: started
+      ports:
+        - 9090:8080
+      tags:
+        - deploy
 

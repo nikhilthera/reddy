@@ -1,7 +1,7 @@
 ---
 - hosts: webservers
   serial:
-  -50%
+    -50%
   tasks: 
     - name: deploying to tomcat
       debug:

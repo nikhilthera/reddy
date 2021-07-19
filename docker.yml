@@ -1,0 +1,8 @@
+---
+- hosts: webservers
+  become: true
+  tasks: 
+    - name: install docker
+      yum: 
+        name: docker
+        state: present

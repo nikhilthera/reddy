@@ -2,13 +2,13 @@
 - hosts: webservers
   become: true
   tasks: 
-    - name: install docker and python-pip
-      yum: 
-        name: "{{ item }}"
-        state: present
-        loop:
-          - docker
-          - python-pip
+  - name: install docker and python pip
+    yum: 
+      name: "{{ item }}"
+      state: present
+      loop:
+        - docker
+        - python-pip
         tags:
           - install
     - name: install docker.py

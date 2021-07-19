@@ -6,7 +6,7 @@
     yum: 
       name: "{{ item }}"
       state: present
-      loop:
+    loop:
         - docker
         - python-pip
       tags:

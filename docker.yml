@@ -11,13 +11,13 @@
         - python-pip
         tags:
           - install
-    - name: install docker.py
+  - name: install docker.py
       pip:
         name: docker.py
         state: present
         tags: 
           - install
-    - name: start and enable docker
+  - name: start and enable docker
       service:
         name: docker
         state: started
@@ -25,7 +25,7 @@
         tags: 
           - start
           - enable
-    - name: run containers
+  - name: run containers
       docker_container:
         name: myapp
         image: kammana/nodeapp:v1

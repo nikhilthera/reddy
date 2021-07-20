@@ -8,6 +8,8 @@
       copy: 
         src: nginx.conf
         dest: /etc/nginx/nginx.conf
+      notify:
+        - restart nginx
     - name: install ngnix server
       yum:
         name: nginx
